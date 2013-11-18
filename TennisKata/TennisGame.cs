@@ -8,7 +8,7 @@ namespace TennisKata
         public int PlayerOneScore;
 
         public void PlayerOneScores() {
-            PlayerOneScore = 15;
+            PlayerOneScore += 15;
         }
     }
 }
