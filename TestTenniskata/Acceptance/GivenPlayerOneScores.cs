@@ -28,5 +28,16 @@ namespace TestTenniskata.Acceptance
 
             Assert.AreEqual(30, tennisGame.PlayerOneScore);
         }
+
+        [Test]
+        public void WhenHeHasThirtyPoints_ThenHeShouldGetFourtyPoints()
+        {
+            var tennisGame = new TennisGame();
+            tennisGame.PlayerOneScore = 30;
+
+            tennisGame.PlayerOneScores();
+
+            Assert.AreEqual(40, tennisGame.PlayerOneScore);
+        }
     }
 }
