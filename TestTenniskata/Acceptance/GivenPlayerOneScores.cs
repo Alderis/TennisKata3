@@ -8,36 +8,42 @@ namespace TestTenniskata.Acceptance
     [TestFixture]
     public class GivenPlayerOneScores
     {
+        private TennisGame _tennisGame;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _tennisGame = new TennisGame();
+        }
+
+
         [Test]
         public void WhenHeHasZeroPoints_ThenHeShouldGetFifteenPoints() {
-            var tennisGame = new TennisGame();
-            tennisGame.PlayerOneScore = 0;
+            _tennisGame.PlayerOneScore = 0;
 
-            tennisGame.PlayerOneScores();
+            _tennisGame.PlayerOneScores();
 
-            Assert.AreEqual(15, tennisGame.PlayerOneScore);
+            Assert.AreEqual(15, _tennisGame.PlayerOneScore);
         }
 
         [Test]
         public void WhenHeHasFifteenPoints_ThenHeShouldGetThirtyPoints()
         {
-            var tennisGame = new TennisGame();
-            tennisGame.PlayerOneScore = 15;
+            _tennisGame.PlayerOneScore = 15;
 
-            tennisGame.PlayerOneScores();
+            _tennisGame.PlayerOneScores();
 
-            Assert.AreEqual(30, tennisGame.PlayerOneScore);
+            Assert.AreEqual(30, _tennisGame.PlayerOneScore);
         }
 
         [Test]
         public void WhenHeHasThirtyPoints_ThenHeShouldGetFourtyPoints()
         {
-            var tennisGame = new TennisGame();
-            tennisGame.PlayerOneScore = 30;
+            _tennisGame.PlayerOneScore = 30;
 
-            tennisGame.PlayerOneScores();
+            _tennisGame.PlayerOneScores();
 
-            Assert.AreEqual(40, tennisGame.PlayerOneScore);
+            Assert.AreEqual(40, _tennisGame.PlayerOneScore);
         }
     }
 }
