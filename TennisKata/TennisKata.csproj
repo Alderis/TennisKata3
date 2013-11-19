@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScoreCalculator.cs" />
     <Compile Include="TennisGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
