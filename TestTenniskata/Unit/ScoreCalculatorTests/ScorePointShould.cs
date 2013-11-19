@@ -29,5 +29,16 @@ namespace TestTenniskata.Unit.ScoreCalculatorTests
 
             Assert.AreEqual(30, newPoints);
         }
+
+        [Test]
+        public void ReturnFourtyWhenGivenThirty()
+        {
+            var currentPoints = 30;
+
+            var scoreCalculator = new ScoreCalculator();
+            var newPoints = scoreCalculator.ScorePoint(currentPoints);
+
+            Assert.AreEqual(40, newPoints);
+        }
     }
 }
