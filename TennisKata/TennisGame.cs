@@ -13,9 +13,15 @@ namespace TennisKata
         }
 
         public int PlayerOneScore;
+        public int PlayerTwoScore;
 
         public void PlayerOneScores() {
             PlayerOneScore = _scoreCalculator.ScorePoint(PlayerOneScore);
+        }
+
+        public void PlayerTwoScores()
+        {
+            throw new NotImplementedException();
         }
     }
 }
